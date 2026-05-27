@@ -35,7 +35,7 @@ form.onsubmit = (event) => {
       convertCurrency(amount.value, GBP, "£")
       break
     case "JPY":
-      convertCurrency(amount.value, GBP, "¥")
+      convertCurrency(amount.value, JPY, "¥")
   }
 }
 
