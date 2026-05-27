@@ -10,10 +10,12 @@ Projeto desenvolvido com HTML, CSS e JavaScript para converter moedas em Real Br
 
 🔗 Deploy: [ferlimatos.github.io/conversor-de-moedas/](https://ferlimatos.github.io/conversor-de-moedas/)
 
-## Melhorias aplicas
+## Melhorias aplicadas
 
 - Correção do layout do footer ao exibir o resultado
-- Apliquei responsividade para dispositivos móveis
+- Responsividade para dispositivos móveis
+- Suporte para valores decimais com vírgula e ponto
+- Adição do iene japonês ao conversor
 
 ## Funcionalidades
 
