@@ -2,6 +2,7 @@
 const USD = 5.03
 const EUR = 5.32
 const GBP = 6.76
+const JPY = 0.032
 
 // O JavaScript está “procurando” elementos dentro do HTML
 const form = document.querySelector("form")
@@ -33,6 +34,8 @@ form.onsubmit = (event) => {
     case "GBP":
       convertCurrency(amount.value, GBP, "£")
       break
+    case "JPY":
+      convertCurrency(amount.value, GBP, "¥")
   }
 }
 
