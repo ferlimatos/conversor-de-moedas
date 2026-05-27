@@ -15,7 +15,7 @@ const result = document.getElementById("result")
 // Manipulando o input para receber somente números
 amount.addEventListener("input", () => {
 
-  const hasCharacterRegex = /\D+/g
+  const hasCharacterRegex = /[^0-9.,]/g
   console.log(amount.value)
   amount.value = amount.value.replace(hasCharacterRegex, "")
 })
@@ -41,29 +41,28 @@ form.onsubmit = (event) => {
 
 // Função para converter a moeda, que recebe 3 parâmetros: amount (valor digitado), price (cotação da moeda) e symbol (símbolo da moeda)
 function convertCurrency(amount, price, symbol) {
-  // console.log(amount, price, symbol)
 
-  // O try...catch serve para lidar com erros.
   try {
     description.textContent = `${symbol} 1 = ${price}`
-    // Calcura o total
-    let total = amount * price
 
-    // Verifica se o resultado é um número
-    if(isNaN(total)) {
-      return alert("Por favor, digite o valor corretamente para converter.")
+    // Substitui vírgula por ponto
+    let fixedAmount = amount.replace(",", ".")
+
+    // Converte para número e calcula
+    let total = Number(fixedAmount) * price
+
+    // Verifica se é número válido
+    if (isNaN(total)) {
+      return alert("Por favor, digite o valor corretamente.")
     }
-    // Formatar o valor total
-    result.textContent = formatCurrencyBRL(total)
 
-    // Aplica a classe que exibe o footer para mostrar o resultado
+    result.textContent = formatCurrencyBRL(total)
     footer.classList.add("show-result")
+
   } catch (error) {
     console.log(error)
-
-    // Remove a classe do footer removendo ele da tela
     footer.classList.remove("show-result")
-    alert("Não foi possível converter. Tente novamente mais tarde.")
+    alert("Não foi possível converter.")
   }
 }
 
