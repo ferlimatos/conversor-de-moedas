@@ -8,7 +8,7 @@
 
 Projeto desenvolvido com HTML, CSS e JavaScript para converter moedas em Real Brasileiro (BRL).
 
-[Link do projeto](https://ferlimatos.github.io/conversor-de-moedas/)
+🔗 Deploy: [ferlimatos.github.io/conversor-de-moedas/](https://ferlimatos.github.io/conversor-de-moedas/)
 
 ## Melhorias aplicas
 

@@ -89,7 +89,8 @@ select {
 input::placeholder,
 select:invalid,
 option {
-  color: #b2b8de;
+background-color: #0e0f25;
+color: #f1f2f6;
 }
 
 input:focus,
