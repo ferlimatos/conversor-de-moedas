@@ -23,7 +23,7 @@
 
 body {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; /* vh = viewport height */
   height: auto;
   overflow-y: auto;
   background-image: url('./img/bg.png');
@@ -32,12 +32,13 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 3.12rem;
+  /* gap: 3.12rem; */
   color: #f1f2f6;
 }
 
 .logo {
   align-self: center;
+  margin-bottom: 2rem;
 }
 
 main {
